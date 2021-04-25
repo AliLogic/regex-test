@@ -38,7 +38,6 @@ int main()
 	std::cout << "Your input:" << input_string << std::endl;
 	
 	for (std::smatch::iterator i = regex_matches.begin(); i < regex_matches.end(); ++ i) {
-	// for (size_t i = 0; i < regex_match.size(); ++ i) {
 		std::ssub_match sub_match = *i;
 		std::string match_string = sub_match.str();
 		std::cout << " submatch " << *i << " : " << match_string << std::endl;
