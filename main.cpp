@@ -21,14 +21,15 @@ int main()
 		input_regex
 	;
 
-	// This is my new function...
 	GetUserInput<std::string>(&input_string, "Input your string that you wish to test the RegEx against:");
 	GetUserInput<std::string>(&input_regex, "Input your RegEx that the string will be tested against:");
+
+	// Missing RegEx validation :|
 
 	std::regex our_regex(input_regex);
 	std::smatch regex_matches;
 
-	// If failed to match the string
+	// If failed to match the string, or RegEx was invalid!
 	if (!std::regex_match(input_string, regex_matches, our_regex)) {
 		std::cout << "Failed to match the string!" << std::endl;
 		return 1;
