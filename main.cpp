@@ -9,7 +9,7 @@
 
 // My template
 template <typename T>
-void GetUserInput(T *input, std::string ask) {
+void GetUserInput(T *input, const std::string ask) {
 	std::cout << ask << std::endl;
 	std::getline(std::cin, *input);
 }
