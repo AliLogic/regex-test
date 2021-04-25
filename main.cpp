@@ -9,7 +9,7 @@
 
 // My template
 template <typename T>
-void GetUserInput(T *input, const std::string ask) {
+void GetUserInput(const std::string ask, T* input) {
 	std::cout << ask << std::endl;
 	std::getline(std::cin, *input);
 }
@@ -21,8 +21,8 @@ int main()
 		input_regex
 	;
 
-	GetUserInput<std::string>(&input_string, "Input your string that you wish to test the RegEx against:");
-	GetUserInput<std::string>(&input_regex, "Input your RegEx that the string will be tested against:");
+	GetUserInput<std::string>("Input your string that you wish to test the RegEx against:", &input_string);
+	GetUserInput<std::string>("Input your RegEx that the string will be tested against:",   &input_regex);
 
 	// Missing RegEx validation :|
 
